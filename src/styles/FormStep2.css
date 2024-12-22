@@ -1,0 +1,43 @@
+/* Step 2 Form styles */
+.step-2 {
+    text-align: center;
+  }
+  
+  .step-2 h2 {
+    color: #6200ea;
+  }
+  
+  .step-2 p {
+    margin-bottom: 20px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn.previous {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  .btn.previous:hover {
+    background-color: #bbb;
+  }
+  
+  .btn.next {
+    background-color: #6200ea;
+    color: #fff;
+  }
+  
+  .btn.next:hover {
+    background-color: #4500b8;
+  }
+  
