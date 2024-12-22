@@ -1,9 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: lightgray;
+  justify-content: space-between;
+}
 
-
-   .main-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-  }
-  
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

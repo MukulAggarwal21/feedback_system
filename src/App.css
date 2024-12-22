@@ -1,19 +1,15 @@
-App.css
-
-/* General styles */
+/* 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
 }
 
-/* App container */
 .app-container {
   display: flex;
   height: 100vh;
 }
 
-/* Sidebar */
 .sidebar {
   width: 250px;
   background-color: #343a40;
@@ -69,7 +65,6 @@ body {
   background-color: #6c757d;
 }
 
-/* Main content */
 .main-content {
   flex: 1;
   padding: 20px;
@@ -90,7 +85,6 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Progress bar */
 .progress-bar {
   display: flex;
   margin-bottom: 20px;
@@ -111,7 +105,6 @@ body {
   color: white;
 }
 
-/* Form styles */
 .student-form {
   display: flex;
   flex-direction: column;
@@ -155,4 +148,4 @@ body {
 .btn.next {
   background-color: #007bff;
   color: white;
-}
+} */

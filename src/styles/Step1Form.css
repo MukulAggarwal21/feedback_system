@@ -1,4 +1,4 @@
-/* Step 1 Form styles */
+
 .student-form {
     display: flex;
     flex-direction: column;
@@ -48,4 +48,11 @@
   .btn.next:hover {
     background-color: #4500b8;
   }
+  .next-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+} 
   

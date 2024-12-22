@@ -1,34 +1,39 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "../styles/Sidebar.css";
+import React from 'react';
+import '../styles/Sidebar.css';
 
+const Sidebar = ({ activePage, setActivePage, setSidebarOpen }) => {
+  const handleClick = (page) => {
+    setActivePage(page);
+    console.log(`${page} clicked`);
+  };
 
-const Sidebar = ({ sidebarOpen, toggleSidebar }) => {
   return (
-    <aside className={`sidebar ${sidebarOpen ? "open" : "closed"}`}>
+    <div className="sidebar">
       <div className="sidebar-header">
+        <i className="home-icon">🏠</i>
         <h2>GCCPUC</h2>
-        <button className="toggle-btn" onClick={toggleSidebar}>
-          {sidebarOpen ? "Close" : "Open"}
+      </div>
+      <div className="user-info">
+        <img src="face-image-url" alt="Profile" className="profile-pic" />
+        <h2>Welcome</h2>
+      </div>
+      <div className="menu">
+        <h4>General</h4>
+        <button
+          onClick={() => handleClick('login')}
+          className={activePage === 'login' ? 'active' : ''}
+        >
+          Login
+        </button>
+        <button
+          onClick={() => handleClick('feedback')}
+          className={activePage === 'feedback' ? 'active' : ''}
+        >
+          Feedback Form
         </button>
       </div>
-      <nav className="sidebar-nav">
-        <ul>
-          <li>
-            <a href="#">Login</a>
-          </li>
-          <li>
-            <a href="#">Feedback Form</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+    </div>
   );
-};
-
-Sidebar.propTypes = {
-  sidebarOpen: PropTypes.bool.isRequired,
-  toggleSidebar: PropTypes.func.isRequired,
 };
 
 export default Sidebar;

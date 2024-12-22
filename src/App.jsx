@@ -1,57 +1,44 @@
-import React, { useState } from "react";
-import Sidebar from "./components/sidebar";
-import Header from "./components/Header";
-import ProgressBar from "./components/ProgressBar";
-import Step1Form from "./components/Step1Form";
-import Step2Review from "./components/Step2Review";
-import "./styles/App.css";
+import React, { useState } from 'react';
+import Sidebar from './components/sidebar';
+import Header from './components/Header';
+import Step1Form from './components/Step1Form';
+import Step2 from './components/Step2Review';
+import Login from './components/Login';
+import './index.css';
 
-function App() {
+const App = () => {
+  const [activePage, setActivePage] = useState('login');
   const [sidebarOpen, setSidebarOpen] = useState(true);
-  const [currentStep, setCurrentStep] = useState(1);
-  const [formData, setFormData] = useState({
-    name: "",
-    branch: "",
-    class: "",
-    division: "",
-    rollNo: "",
-  });
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const goToNextStep = () => {
-    if (currentStep < 2) setCurrentStep(currentStep + 1);
-  };
-
-  const goToPreviousStep = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1);
-  };
+  const [activeStep, setActiveStep] = useState(1);
 
   return (
-    <div className="app-container">
-      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-      <main className="main-content">
-        <Header />
-        <ProgressBar currentStep={currentStep} />
-        {currentStep === 1 ? (
-          <Step1Form
-            formData={formData}
-            handleInputChange={handleInputChange}
-            goToNextStep={goToNextStep}
-          />
-        ) : (
-          <Step2Review goToPreviousStep={goToPreviousStep} />
+    <>
+  
+ <div className="app-container">
+      {sidebarOpen && (
+        <Sidebar
+          activePage={activePage}
+          setActivePage={setActivePage}
+          setSidebarOpen={setSidebarOpen}
+        />
+      )}
+      <div className="main-content">
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+        {activePage === 'login' && <Login/>}
+        {activePage === 'feedback' && (
+          activeStep === 1 ? (
+            <Step1Form setActiveStep={setActiveStep} />
+          ) : (
+            <Step2 setActiveStep={setActiveStep}/>
+          )
         )}
-      </main>
+      </div>
     </div>
+  
+
+    </>
+   
   );
-}
+};
 
 export default App;

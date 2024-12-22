@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,40 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+
+.app-container {
+  display: flex;
+  height: 100vh; 
+  flex-direction: row; 
 }
+
+.sidebar {
+  width: 250px; 
+  background-color: #f4f4f4;
+}
+
+.main-content {
+  flex: 1;
+  /* padding: 20px;  */
+  overflow-y: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.sidebar.closed {
+  display: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+}
+

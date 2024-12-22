@@ -1,4 +1,3 @@
-/* General App-wide styles */
 .app-container {
     display: flex;
     height: 100vh;
@@ -7,7 +6,7 @@
   
   .main-content {
     flex: 1;
-    padding: 20px;
+    /* padding: 20px; */
     background-color: #f9f9f9;
   }
   

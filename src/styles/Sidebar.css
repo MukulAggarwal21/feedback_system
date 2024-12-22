@@ -1,52 +1,56 @@
-/* Sidebar styles */
+
+
 .sidebar {
-    width: 250px;
-    background-color: #6200ea;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .sidebar.closed {
-    width: 70px;
-  }
-  
-  .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-  }
-  
-  .sidebar-header h2 {
-    font-size: 18px;
-  }
-  
-  .toggle-btn {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  .sidebar-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar-nav li {
-    padding: 10px 0;
-  }
-  
-  .sidebar-nav li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .sidebar-nav li a:hover {
-    text-decoration: underline;
-  }
-  
+  width: 250px;
+  height: 100vh;
+  background-color: blue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.sidebar-header h2 {
+  font-size: 18px;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.home-icon {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.menu button {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  font-size: 18px;
+}
+.menu h4{
+  font-size: 20px;
+}
+
+.menu button.active {
+  font-weight: bold;
+}

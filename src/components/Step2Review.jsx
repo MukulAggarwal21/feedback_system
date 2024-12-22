@@ -1,30 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "../styles/Form.css";
+import React from 'react';
+import ProgressBar from './ProgressBar';
+import '../styles/FormStep2.css';
 
-const Step2Review = ({ goToPreviousStep }) => {
+const Step2 = ({ setActiveStep }) => {
   return (
-    <div className="step-2">
-      <h2>Thank you for providing your details!</h2>
-      <p>Please review your information and proceed.</p>
-      <div className="form-buttons">
-        <button
-          type="button"
-          className="btn previous"
-          onClick={goToPreviousStep}
-        >
-          Previous
-        </button>
-        <button type="button" className="btn next">
-          Submit
-        </button>
-      </div>
+    <div className="form-container">
+      <h2>Step 2 Feedback</h2>
+      <ProgressBar step={2} />
+      <form>
+        <div className="form-group">
+          <label>Feedback</label>
+          <textarea  className='textcase' rows="5"></textarea>
+        </div>
+        <button className="prev-btn" onClick={() => setActiveStep(1)}>Previous</button>
+        <button className="submit-btn">Submit</button>
+      </form>
     </div>
   );
 };
 
-Step2Review.propTypes = {
-  goToPreviousStep: PropTypes.func.isRequired,
-};
-
-export default Step2Review;
+export default Step2;
